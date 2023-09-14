@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import { Route, Routes ,BrowserRouter} from "react-router-dom"
-import { Todoslosproductos } from './paginas/Todoslosproductos';
+import { ItemListContainer } from './paginas/ItemListContainer';
 import Remeras from './paginas/Remeras';
 import Pantalones from './paginas/Pantalones';
 
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/Todoslosproductos" element={<Todoslosproductos/>}/>
+        <Route path="/ItemListContainer" element={<ItemListContainer greeting="Bievenido a Dreamer"/>}/>
         <Route path="/Remeras" element={<Remeras/>}/>
         <Route path="/Pantalones" element={<Pantalones/>}/>
       </Routes>
