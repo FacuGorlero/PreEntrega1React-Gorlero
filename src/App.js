@@ -1,9 +1,9 @@
 import './App.css';
+import "./main.css";
 import Navbar from './components/Navbar';
 import { Route, Routes ,BrowserRouter} from "react-router-dom"
 import { ItemListContainer } from './paginas/ItemListContainer';
-import Remeras from './paginas/Remeras';
-import Pantalones from './paginas/Pantalones';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 
@@ -13,9 +13,10 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/ItemListContainer" element={<ItemListContainer greeting="Bievenido a Dreamer"/>}/>
-        <Route path="/Remeras" element={<Remeras/>}/>
-        <Route path="/Pantalones" element={<Pantalones/>}/>
+        <Route path="/ItemListContainer" element={<ItemListContainer/>}/>
+        <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/productos" element={<ItemListContainer/>}/>
+        <Route path="/productos/:categoria" element={<ItemListContainer/>}/>
       </Routes>
     </BrowserRouter>
     </div>
